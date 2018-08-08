@@ -18,5 +18,4 @@ export class ProductsComponent implements OnInit {
       data => this.products$ = data
     )
   }
-
 }

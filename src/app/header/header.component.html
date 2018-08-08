@@ -10,8 +10,19 @@
           </div>
       </div>
       <div class="navbar-login">
-        <i class="material-icons">
+        <i class="material-icons" style="position:relative">
           notifications
+          <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
+              <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#fff"></circle>
+              <text id="notification_count" x="7" y="11" fill="#000" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle">1</text>
+          </svg>
+        </i>
+        <i class="material-icons" style="position:relative">
+            shopping_cart
+            <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
+                <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#fff"></circle>
+                <text id="notification_count" x="7" y="11" fill="#000" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle">1</text>
+            </svg>
         </i>
         <i class="material-icons">
           account_circle
@@ -19,7 +30,8 @@
       </div>
     </div>
   </div>
-  <div class="navbar-catalog flex">
+  <div class="header_catalog">
+    <div class="navbar-catalog flex">
       <div class="search-item">
         Search
         <i class="material-icons">
@@ -41,4 +53,5 @@
         </i>
       </div>
     </div>
+  </div>
 </div>

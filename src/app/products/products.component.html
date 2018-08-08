@@ -2,14 +2,12 @@
   <div class="catalog-products_content">
     <div *ngFor="let product of products$" class="catalog-products_card">
       <div class="catalog-products_card-image">
-        <span>{{ product.name }}</span>
-        <img src="" alt="">
+        <img src="{{ product.thumbnailImage }}" alt="{{ product.name }}">
       </div>
       <div class="catalog-products_card-details">
-        <div>{{ product.brand }}</div>
         <div class="id">{{ log(product) }}</div>
-        <div class="name">{{ product.items.name }}</div>
-        <div class="price">{{ product.items.salePrice }}</div>
+        <div class="name">{{ product.name }}</div>
+        <div class="price">{{ product.salePrice }}</div>
       </div>
     </div>
   </div>
