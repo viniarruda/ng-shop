@@ -3,6 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 
+## Install
+- git clone
+- npm install
+- ng serve -o
+
 ## Using
 - Material
 - Material Icons
