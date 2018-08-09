@@ -6,6 +6,7 @@ export class Item {
   brandName: String;
   thumbnailImage: String;
   mediumImage: String;
+  largeImage: String;
   size: String;
   color: String;
   shipToStore: Boolean;

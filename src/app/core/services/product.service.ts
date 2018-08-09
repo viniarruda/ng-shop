@@ -19,7 +19,7 @@ export class ProductService extends BaseService {
   }
 
   listProducts(): Observable<ArrayResponse<Product>> {
-    return this.http.get<ArrayResponse<Product>>(`${this.apiUrl}/paginated/items?format=json&category=5438&brand=Wrangler&apiKey=${this.apiKey}`).pipe(
+    return this.http.get<ArrayResponse<Product>>(`${this.apiUrl}/paginated/items?format=json&category=3944_96469&brand=Apple&apiKey=${this.apiKey}`).pipe(
       map((data: ArrayResponse<Product>) => data),
       catchError(this.handleError<ArrayResponse<Product>>('listAllProducts'))
     );
@@ -33,7 +33,7 @@ export class ProductService extends BaseService {
   }
 
   get(id: Number): Observable<Response<Product>> {
-    return this.http.get<Response<Product>>(`${this.apiUrl}/items/${id}?format=json&apiKey=${this.apiKey}/`).pipe(
+    return this.http.get<Response<Product>>(`${this.apiUrl}/items/${id}?format=json&apiKey=${this.apiKey}`).pipe(
       map((data: Response<Product>) => data),
       catchError(this.handleError<Response<Product>>('getProduct'))
     );

@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
 
   getProducts() {
     this.productService.listProducts().subscribe(
-      data => this.products = data.results);
+      data => this.products = data.items);
   }
 
   toggleSearch() {

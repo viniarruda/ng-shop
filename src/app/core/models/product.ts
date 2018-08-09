@@ -6,4 +6,5 @@ export class Product {
   format: String;
   nextPage: String;
   totalPages: Number;
+  items: Item[];
 }
