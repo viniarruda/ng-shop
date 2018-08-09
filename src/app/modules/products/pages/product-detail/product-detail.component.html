@@ -7,9 +7,11 @@
       <span>Cor: {{ product.color }}</span>
       <span>Modelo: {{ product.modelNumber }}</span>
       <span>Fabricante: {{ product.brandName }}</span>
-      <div class="image-gallery">
-        <div *ngFor="let i of product.imageEntities" class="image-gallery_item">
-          <img src="{{ i.thumbnailImage }}" alt="{{ product.name }}">
+      <div class="gallery">
+        <div class="image-gallery">
+            <div *ngFor="let i of product.imageEntities" class="image-gallery_item">
+              <img src="{{ i.thumbnailImage }}" alt="{{ product.name }}">
+            </div>
         </div>
         <img src="{{ product.largeImage }}" alt="{{ product.name }}" />
       </div> 
