@@ -7,6 +7,7 @@ import {
 } from '@angular/material';
 import {SpinnerComponent} from './components/spinner.component';
 import {LayoutComponent} from './components/layout.component';
+import {CartPickupComponent} from '../modules/cart/pages/cart-pickup/cart-pickup.component';
 
 @NgModule({
   imports: [
@@ -21,12 +22,14 @@ import {LayoutComponent} from './components/layout.component';
   declarations: [
     ContainerComponent,
     SpinnerComponent,
-    LayoutComponent
+    LayoutComponent,
+    CartPickupComponent
   ],
   exports: [
     ContainerComponent,
     SpinnerComponent,
-    LayoutComponent
+    LayoutComponent,
+    CartPickupComponent
   ]
 })
 export class SharedModule { }

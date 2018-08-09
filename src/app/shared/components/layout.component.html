@@ -5,8 +5,8 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
+  <mat-sidenav-content style="overflow:inherit;">
+    <mat-toolbar style="background-color: #3c454f;color: #fff;">
       <button mat-icon-button (click)="nav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
@@ -14,11 +14,52 @@
         <mat-icon>home</mat-icon>
       </button>
       <h1>{{title}}</h1>
+      <div class="nav-user">
+        <button mat-icon-button>
+          <mat-icon>notifications</mat-icon>
+          <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
+              <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#6ac4ea"></circle>
+              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle" data-bind="text:$root.cartQuantity">0</text>
+          </svg>
+        </button>
+        <button mat-icon-button (click)="cart.toggle()">
+          <mat-icon>shopping_cart</mat-icon>
+          <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
+              <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#6ac4ea"></circle>
+              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle" data-bind="text:$root.cartQuantity">0</text>
+          </svg>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <mat-toolbar color="primary">
+      <div class="sales-group">
+        <mat-icon>filter_list</mat-icon>
+        <mat-icon>shopping_cart</mat-icon>
+        <mat-icon>local_shipping</mat-icon>
+        <mat-icon>history</mat-icon>
+      </div>
+      <mat-icon>person</mat-icon>
     </mat-toolbar>
 
     <app-container [class]="'mat-typography ' + containerClass">
       <ng-content></ng-content>
     </app-container>
+    <mat-sidenav #cart class="side-nav right" position="end">
+        <mat-nav-list>
+          <div class="side-cart_header">
+            <button mat-icon-button (click)="cart.close()">
+              <mat-icon>close</mat-icon>
+            </button>
+            <h1 class="side-cart_header-title">Carrinho</h1>
+          </div>
+          <div class="side-cart_content">
+            <app-cart-pickup></app-cart-pickup>
+          </div>
+        </mat-nav-list>
+      </mat-sidenav>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

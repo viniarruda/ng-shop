@@ -1,19 +1,27 @@
 <app-layout [containerClass]="'flex'">
-    <ng-template [ngIf]="product">
-      <div class="image-column">
-        <img src="{{ product.thumbnailImage }}" />
-  
-        <button mat-raised-button color="primary" routerLink="/products">
-          Back
-        </button>
-      </div>
-      <div class="description-column">
-        <h1>{{product.name}}</h1>
-        <p>{{product.shortDescription}}</p>
-  
-        <mat-divider></mat-divider>
-      </div>
-  
-  
-    </ng-template>
+  {{ log(product) }}
+  <ng-template [ngIf]="product">
+    <div class="image-column">
+      <h1>{{ product.name }}</h1>
+      <span>Sku: {{ product.itemId }}</span>
+      <span>Cor: {{ product.color }}</span>
+      <span>Modelo: {{ product.modelNumber }}</span>
+      <span>Fabricante: {{ product.brandName }}</span>
+      <div class="image-gallery">
+        <div *ngFor="let i of product.imageEntities" class="image-gallery_item">
+          <img src="{{ i.thumbnailImage }}" alt="{{ product.name }}">
+        </div>
+        <img src="{{ product.largeImage }}" alt="{{ product.name }}" />
+      </div> 
+      <button mat-raised-button color="primary" routerLink="/products">
+        Back
+      </button>
+    </div>
+    <div class="description-column">
+      <h2>Descrição</h2>
+      <p>{{ product.longDescription }}</p>
+      <span>{{ product.stock !== 'Not available' ? product.salePrice : product.stock}}</span>
+      <mat-divider></mat-divider>
+    </div>
+  </ng-template>
   </app-layout>

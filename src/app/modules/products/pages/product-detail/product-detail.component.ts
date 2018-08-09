@@ -22,7 +22,10 @@ export class ProductDetailComponent implements OnInit {
 
   getProduct(id: Number) {
     this.productService.get(id).subscribe(
-      data => this.product = data.item);
+      data => this.product = data);
   }
 
+  log(val) {
+    console.log(val);
+  }
 }

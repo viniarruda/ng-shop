@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit {
       this.searching = true;
       this.products = null;
       this.productService.search(term).subscribe(
-        data => this.products = data.results);
+        data => this.products = data.items);
     }
   }
 

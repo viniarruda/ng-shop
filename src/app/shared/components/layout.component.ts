@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class LayoutComponent {
   @Input() containerClass = '';
-  @Input() title = 'PDV Angular';
+  @Input() title = 'MILLENNIUM';
 
   constructor(private router: Router) {
   }
@@ -16,4 +16,5 @@ export class LayoutComponent {
   home() {
     this.router.navigateByUrl('/products');
   }
+
 }

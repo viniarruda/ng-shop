@@ -1,12 +1,13 @@
 <mat-card
   routerLink="/product/{{product.itemId}}"
-  *ngIf="product && product.largeImage"
+  *ngIf="product && product.thumbnailImage"
   ngClass="{{class}}">
 
-  <img mat-card-image src="{{product.largeImage}}" />
+  <img mat-card-image src="{{ product.largeImage ? product.largeImage : product.mediumImage}}" />
 
   <mat-card-content>
     <strong>{{product.name}}</strong>
+    <span class="product-card_price">${{ product.salePrice }}</span>
     <p>{{product.shortDescription}}</p>
   </mat-card-content>
 

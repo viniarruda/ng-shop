@@ -9,9 +9,41 @@
 
 .side-nav {
   min-width: 250px;
+
+  &.right {
+    min-width: 500px;
+    .side-cart {
+      &_header {
+        display: flex;
+        flex-flow: row wrap;
+        padding-left: 10px;
+        
+        &-title {
+          margin: 0 auto;
+        }
+      }
+      &_content {
+        padding: 20px;
+      }
+    }
+  }
 }
 
-.mat-sidenav-container {
-  min-height: 100%;
-  background: #fafafa;
+.mat-sidenav {
+
+  &-container {
+    min-height: 100%;
+    background: #fafafa;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  &-content {
+    width: 100%;
+    
+    .nav-user {
+      flex: 1;
+      text-align: right;
+    }
+  } 
 }

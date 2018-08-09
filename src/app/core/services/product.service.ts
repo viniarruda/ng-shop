@@ -32,10 +32,10 @@ export class ProductService extends BaseService {
     );
   }
 
-  get(id: Number): Observable<Response<Product>> {
-    return this.http.get<Response<Product>>(`${this.apiUrl}/items/${id}?format=json&apiKey=${this.apiKey}`).pipe(
-      map((data: Response<Product>) => data),
-      catchError(this.handleError<Response<Product>>('getProduct'))
+  get(id: Number): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/items/${id}?format=json&apiKey=${this.apiKey}`).pipe(
+      map((data: Product) => data),
+      catchError(this.handleError<Product>('getProduct'))
     );
   }
 }

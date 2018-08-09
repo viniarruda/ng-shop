@@ -19,4 +19,15 @@ mat-card {
     min-height: 135px;
     margin: 0;
   }
+  
+  .product-card {
+    &_price {
+      display: block;
+      color: #08308C;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
 }

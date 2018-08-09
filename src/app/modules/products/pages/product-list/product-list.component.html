@@ -9,15 +9,12 @@
       Exit Search
     </button>
   </div>
-
   <div *ngIf="!isLoading; else loading" class="list-holder" >
-    <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
+      <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
   </div>
-
   <ng-template #loading>
     <app-spinner></app-spinner>
   </ng-template>
-
 </app-layout>
 
   
