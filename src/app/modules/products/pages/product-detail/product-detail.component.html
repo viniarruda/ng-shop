@@ -1,0 +1,19 @@
+<app-layout [containerClass]="'flex'">
+    <ng-template [ngIf]="product">
+      <div class="image-column">
+        <img src="{{ product.thumbnailImage }}" />
+  
+        <button mat-raised-button color="primary" routerLink="/products">
+          Back
+        </button>
+      </div>
+      <div class="description-column">
+        <h1>{{product.name}}</h1>
+        <p>{{product.shortDescription}}</p>
+  
+        <mat-divider></mat-divider>
+      </div>
+  
+  
+    </ng-template>
+  </app-layout>

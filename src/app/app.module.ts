@@ -1,30 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MatButtonModule, MatMenuModule, MatDividerModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ProductsComponent } from './products/products.component';
-
-import { HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthenticationModule} from './modules/authentication/authentication.module';
+import {AppRoutingModule} from './core/routing/app-routing.module';
+import {ProductsModule} from './modules/products/products.module';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ProductsComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    LoadingBarHttpClientModule,
+    LoadingBarRouterModule,
     HttpClientModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatDividerModule
+    AuthenticationModule,
+    ProductsModule,
+    AppRoutingModule,
+    MatSnackBarModule
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
