@@ -1,33 +1,27 @@
 <div class="cart-pickup_content">
-  <div class="cart-pickup_content-item">
+  <div *ngFor="let i of recentItem" class="cart-pickup_content-item">
     <div class="cart-item_details flex">
-      <div>001</div>
-      <div>Camiseta</div>
+      <img src="{{ i.thumbnailImage }}" alt="{{ i.name }}">
+      <div class="cart-item_details-text">
+        <div>{{ i.itemId}}</div>
+        <div>{{ i.name }}</div>
+      </div>
     </div>
     <div class="cart-item_details-price flex">
-      R$19.90
+      R${{ i.salePrice }} 
+    </div>
+    <div class="cart-item_details-actions flex">
+      <button mat-icon-button class="btn btn-edit" (click)="editCartItem()">
+        <mat-icon>edit</mat-icon>
+      </button>
     </div>
   </div>
-  <div class="cart-pickup_content-item">
-    <div class="cart-item_details flex">
-      <div>025</div>
-      <div>Calça</div>
-    </div>
-    <div class="cart-item_details-price flex">
-      R$29.90
-    </div>
-  </div>
-  <div class="cart-pickup_content-item">
-    <div class="cart-item_details flex">
-      <div>150</div>
-      <div>Bermuda</div>
-    </div>
-    <div class="cart-item_details-price flex">
-      R$15.90
-    </div>
+  <div class="cart-total-price">
+    Total: {{ log(totalCartPrice()) }}
+    Itens: {{ quantityItemsCart() }}
   </div>
   <div class="cart-pickup_actions">
-      <button mat-raised-button class="btn btn-cancel">
+      <button mat-raised-button class="btn btn-cancel" (click)="clearCart()">
         Cancelar
       </button>
       <button mat-raised-button class="btn btn-checkout">

@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // const routes: Routes = [
-//  {path: 'cart', component: CheckoutCart},
+//  {path: 'cart/checkout', component: CheckoutCart},
 // ];
 
 // @NgModule({

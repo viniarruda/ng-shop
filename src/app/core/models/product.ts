@@ -1,5 +1,6 @@
 import {Item} from './item';
 import {Gallery} from './gallery';
+import {Cart} from './cart';
 
 export class Product {
   category: Number;
@@ -9,9 +10,11 @@ export class Product {
   totalPages: Number;
   items: Item[];
 
+  cart: Cart[];
   // Single Product
   itemId: Number;
   name: String;
+  salePrice: number;
   shortDescription: String;
   largeImage: String;
   color: String;

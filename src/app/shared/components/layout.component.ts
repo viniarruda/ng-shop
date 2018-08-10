@@ -1,20 +1,29 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {CartService} from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-layout',
   templateUrl: 'layout.component.html',
   styleUrls: ['layout.component.scss']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit{
   @Input() containerClass = '';
   @Input() title = 'MILLENNIUM';
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private cartService: CartService) {}
+  
+  ngOnInit() {
+    this.itemsInCart();
   }
 
   home() {
     this.router.navigateByUrl('/products');
+  }
+
+  itemsInCart() {
+    return this.cartService.qtd;
   }
 
 }

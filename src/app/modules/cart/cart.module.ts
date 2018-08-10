@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CartRoutingModule} from './cart-routing.module';
 import {SharedModule} from '../../shared/shared.module';
+import { CartItemComponent } from './components/cart-item.component';
+import {CartService} from '../../core/services/cart.service';
 import {
   MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule
 } from '@angular/material';
@@ -10,7 +11,6 @@ import {
   imports: [
     CommonModule,
     SharedModule,
-    CartRoutingModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
@@ -19,10 +19,10 @@ import {
     MatDividerModule
   ],
   providers: [
-    
+    CartService
   ],
   declarations: [
-    
+    CartItemComponent
   ]
 })
 export class CartModule { }

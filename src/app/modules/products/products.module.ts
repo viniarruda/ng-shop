@@ -8,8 +8,10 @@ import {
   MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule
 } from '@angular/material';
 import {ProductService} from '../../core/services/product.service';
+import { CartService } from '../../core/services/cart.service';
 import {ProductCardComponent} from './components/product-card.component';
 import {ProductDetailComponent} from './pages/product-detail/product-detail.component';
+
 
 @NgModule({
   imports: [
@@ -24,7 +26,8 @@ import {ProductDetailComponent} from './pages/product-detail/product-detail.comp
     MatDividerModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    CartService
   ],
   declarations: [
     ProductListComponent,

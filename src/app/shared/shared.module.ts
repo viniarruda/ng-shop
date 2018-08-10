@@ -5,6 +5,7 @@ import {
   MatButtonModule, MatIconModule, MatListModule, MatProgressSpinnerModule, MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
+import {CartService} from '../core/services/cart.service';
 import {SpinnerComponent} from './components/spinner.component';
 import {LayoutComponent} from './components/layout.component';
 import {CartPickupComponent} from '../modules/cart/pages/cart-pickup/cart-pickup.component';
@@ -18,6 +19,9 @@ import {CartPickupComponent} from '../modules/cart/pages/cart-pickup/cart-pickup
     MatIconModule,
     MatListModule,
     MatButtonModule
+  ],
+  providers: [
+    CartService
   ],
   declarations: [
     ContainerComponent,
