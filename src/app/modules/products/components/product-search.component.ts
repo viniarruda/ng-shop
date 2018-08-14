@@ -7,7 +7,7 @@ import {debounceTime, distinctUntilChanged} from 'rxjs/internal/operators';
   template: `
     <mat-form-field>
       <input #searchField matInput
-             placeholder="Search Product"
+             placeholder="Buscar produtos"
              (input)="doSearch()"
              (keyup)="doSearch()"
              (click)="doSearch()"

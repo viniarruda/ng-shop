@@ -23,7 +23,7 @@ export class LayoutComponent implements OnInit{
   }
 
   itemsInCart() {
-    return this.cartService.qtd;
+    return this.cartService.quantityItemsCart();
   }
 
 }

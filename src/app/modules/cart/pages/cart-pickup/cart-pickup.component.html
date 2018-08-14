@@ -11,20 +11,21 @@
       R${{ i.salePrice }} 
     </div>
     <div class="cart-item_details-actions flex">
-      <button mat-icon-button class="btn btn-edit" (click)="editCartItem()">
+      <button mat-icon-button class="btn btn-edit" (click)="clearCart()">
         <mat-icon>edit</mat-icon>
       </button>
     </div>
   </div>
+  
   <div class="cart-total-price">
-    Total: {{ log(totalCartPrice()) }}
+    Total: {{ totalCartPrice() }}
     Itens: {{ quantityItemsCart() }}
   </div>
   <div class="cart-pickup_actions">
-      <button mat-raised-button class="btn btn-cancel" (click)="clearCart()">
+      <button mat-raised-button class="btn btn-cancel" (click)="clear()">
         Cancelar
       </button>
-      <button mat-raised-button class="btn btn-checkout">
+      <button mat-raised-button class="btn btn-checkout" routerLink="/cart/checkout">
         Checkout
       </button>
   </div>

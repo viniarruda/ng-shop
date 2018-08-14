@@ -3,6 +3,7 @@ export class Item {
   name: String;
   salePrice: Number;
   shortDescription: String;
+  longDescription: String;
   brandName: String;
   thumbnailImage: String;
   mediumImage: String;

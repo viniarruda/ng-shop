@@ -17,14 +17,18 @@ export class CartService {
     return this.cartItem.push(product);
   }
 
-  quantityItemsCart(items) {
-    return this.qtd = items;
+  quantityItemsCart() {
+    return this.cartItem.length;
+  }
+
+  clearCart() {
+    return this.cartItem = [];
   }
 
   totalCartPrice() {}
 
-  removeCartItem() {
-
+  removeCartItem(product: Product, id) {
+    this.cartItem.filter((product) => product.itemId === id)
   }
 
 }

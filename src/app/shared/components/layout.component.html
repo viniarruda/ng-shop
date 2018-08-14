@@ -19,14 +19,14 @@
           <mat-icon>notifications</mat-icon>
           <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
               <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#6ac4ea"></circle>
-              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle" data-bind="text:$root.cartQuantity">0</text>
+              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle">0</text>
           </svg>
         </button>
         <button mat-icon-button (click)="cart.toggle()">
           <mat-icon>shopping_cart</mat-icon>
           <svg id="" style="position: absolute;bottom: 0;right: 0;width: 14px;height: 14px;">
               <circle cx="7" cy="7" r="7" stroke="black" stroke-width="0" fill="#6ac4ea"></circle>
-              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle" data-bind="text:$root.cartQuantity">{{ itemsInCart() }}</text>
+              <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle">{{ itemsInCart() }}</text>
           </svg>
         </button>
         <button mat-icon-button>

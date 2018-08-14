@@ -9,7 +9,7 @@ import {CartService} from '../../../../core/services/cart.service';
 })
 export class CartPickupComponent implements OnInit {
   recentItem: Product[] = [];
-  totalPrice: any;
+  totalPrice: number = 0;
 
   constructor(private cartService: CartService) {}
 
@@ -17,22 +17,26 @@ export class CartPickupComponent implements OnInit {
     this.recentItem = this.cartService.cartItem;
   }
 
-  editCartItem() {
-    alert('edit');
-  }
+  editCartItem(id) {
 
-  clearCart() {
-    
   }
 
   quantityItemsCart() {
-    this.cartService.quantityItemsCart(this.cartService.cartItem.length);
-    return this.cartService.cartItem.length;
+    return this.recentItem.length
+  }
+
+  clearCart(id) {
+    let indexCart = this.cartService.cartItem.findIndex(i => i.itemId === id);
+    return this.cartService.cartItem.splice(indexCart);
+  }
+
+  clear() {
+    this.recentItem = [];
+    this.cartService.clearCart();
   }
 
   totalCartPrice() {
-    this.cartService.cartItem.map((item) => { 
-      this.totalPrice = item.salePrice++ })
+    this.totalPrice = this.recentItem.reduce((totalPrice, product) => totalPrice + product.salePrice, 0);
     return this.totalPrice;
   }
 

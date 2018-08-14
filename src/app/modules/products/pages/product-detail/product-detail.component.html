@@ -21,13 +21,13 @@
     </div>
     <div class="description-column">
       <h2>Descrição</h2>
-      <p>{{ product.longDescription }}</p>
+      <p>{{ product.shortDescription }}</p>
       <span>{{ product.stock !== 'Not available' ? product.salePrice : product.stock}}</span>
       <mat-divider></mat-divider>
       <button mat-raised-button>
         <mat-icon>local_shipping</mat-icon> Encomendar
       </button>
-      <button mat-raised-button color="primary" (click)="getCartItem(product)">
+      <button mat-raised-button color="primary" (click)="getCartItem(product)" class="btn btn-buy">
         Comprar
       </button>
     </div>
