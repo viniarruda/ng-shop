@@ -1,0 +1,33 @@
+@import "variables";
+
+.cart-pickup {
+  &_actions {
+    display: flex;
+    flex-flow: row wrap;
+    .btn {
+      color: #000;
+      flex: 1;
+      margin: 15px;
+      font-weight: bold;
+
+      &-checkout {
+        background-color: #6ac4ea;
+        color: white;
+        &:hover {
+          background-color: #2496C7;
+        }
+      }
+      &-cancel {
+        background-color: #e6e6e6;
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.cart-total-price {
+  margin: 20px 0;
+}

@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'products', loadChildren: '../../modules/products/products.module#ProductsModule'},
-  { path: 'cart', loadChildren: '../../modules/cart/cart.module#CartModule'},
+  { path: 'sales', loadChildren: '../../modules/sales/sales.module#SalesModule'},
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
 ];
 

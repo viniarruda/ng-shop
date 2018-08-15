@@ -1,0 +1,17 @@
+<div [@itemAnim] class="cart-pickup_content-item">
+  <div class="cart-item_details flex">
+    <img src="{{ product.thumbnailImage }}" alt="{{ product.name }}">
+    <div class="cart-item_details-text">
+      <div>{{ product.itemId}}</div>
+      <div>{{ product.name }}</div>
+    </div>
+  </div>
+  <div class="cart-item_details-price flex">
+    R${{ product.salePrice }} 
+  </div>
+  <div class="cart-item_details-actions flex">
+    <button mat-icon-button class="btn btn-edit" (click)="clearCart()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+</div>

@@ -9,7 +9,7 @@ import {CartService} from '../../core/services/cart.service';
 })
 export class LayoutComponent implements OnInit{
   @Input() containerClass = '';
-  @Input() title = 'MILLENNIUM';
+  @Input() title = 'ANGULAR SHOP';
 
   constructor(private router: Router,
               private cartService: CartService) {}
@@ -19,7 +19,7 @@ export class LayoutComponent implements OnInit{
   }
 
   home() {
-    this.router.navigateByUrl('/products');
+    this.router.navigateByUrl('/sales');
   }
 
   itemsInCart() {

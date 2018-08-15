@@ -8,7 +8,8 @@ import {
 import {CartService} from '../core/services/cart.service';
 import {SpinnerComponent} from './components/spinner.component';
 import {LayoutComponent} from './components/layout.component';
-import {CartPickupComponent} from '../modules/cart/pages/cart-pickup/cart-pickup.component';
+import {CartPickupComponent} from '../modules/sales/pages/cart/cart-pickup.component';
+import {CartItemComponent} from '../modules/sales/components/cart/cart-item.component';
 
 @NgModule({
   imports: [
@@ -27,13 +28,15 @@ import {CartPickupComponent} from '../modules/cart/pages/cart-pickup/cart-pickup
     ContainerComponent,
     SpinnerComponent,
     LayoutComponent,
-    CartPickupComponent
+    CartPickupComponent,
+    CartItemComponent
   ],
   exports: [
     ContainerComponent,
     SpinnerComponent,
     LayoutComponent,
-    CartPickupComponent
+    CartPickupComponent,
+    CartItemComponent
   ]
 })
 export class SharedModule { }

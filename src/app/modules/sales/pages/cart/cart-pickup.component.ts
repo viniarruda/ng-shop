@@ -13,6 +13,10 @@ export class CartPickupComponent implements OnInit {
 
   constructor(private cartService: CartService) {}
 
+  get isLoading(): Boolean {
+    return this.recentItem == null;
+  }
+
   ngOnInit() {
     this.recentItem = this.cartService.cartItem;
   }
