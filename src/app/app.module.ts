@@ -6,8 +6,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthenticationModule} from './modules/authentication/authentication.module';
 import {AppRoutingModule} from './core/routing/app-routing.module';
-import {ProductsModule} from './modules/products/products.module';
-import { CartModule } from './modules/cart/cart.module';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import {MatSnackBarModule} from '@angular/material';
@@ -20,8 +18,6 @@ import {MatSnackBarModule} from '@angular/material';
     LoadingBarRouterModule,
     HttpClientModule,
     AuthenticationModule,
-    ProductsModule,
-    CartModule,
     AppRoutingModule,
     MatSnackBarModule
   ],

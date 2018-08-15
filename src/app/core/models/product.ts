@@ -15,6 +15,7 @@ export class Product {
   itemId: Number;
   name: String;
   salePrice: number;
+  thumbnailImage: String;
   shortDescription: String;
   longDescription: String;
   largeImage: String;
