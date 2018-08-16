@@ -35,8 +35,8 @@ export class CartPickupComponent implements OnInit {
   }
 
   clear() {
-    this.recentItem = [];
-    this.cartService.clearCart();
+    this.cartService.cartItem = [];
+    this.recentItem = this.cartService.cartItem;
   }
 
   totalCartPrice() {

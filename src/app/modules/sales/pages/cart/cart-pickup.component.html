@@ -1,7 +1,7 @@
-<div class="cart-pickup_content">
-  <app-cart-item *ngFor="let i of recentItem" [product]="i"></app-cart-item>
+<div *ngIf="recentItem" class="cart-pickup_content">
+  <app-cart-item *ngFor="let i of recentItem" [product]="i" (clear)="clearCart($event)"></app-cart-item>
   <div class="cart-total-price">
-    Total: {{ totalCartPrice() }}
+    Total: R${{ totalCartPrice() }}
     Itens: {{ quantityItemsCart() }}
   </div>
   <div class="cart-pickup_actions">

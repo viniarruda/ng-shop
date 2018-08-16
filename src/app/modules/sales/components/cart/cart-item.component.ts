@@ -1,4 +1,4 @@
-import {Component, HostListener, Input} from '@angular/core';
+import {Component, HostListener, Input, Output, OnInit, EventEmitter} from '@angular/core';
 import {
   trigger, transition, animate, style
 } from '@angular/animations';
@@ -13,12 +13,21 @@ import {Product} from '../../../../core/models/product';
       transition(':enter', [
         style({transform: 'translateX(100%)'}),
         animate(350)
-      ])
+      ]),
+      transition(':leave', [
+        style({transform: 'translateX(-100%)'}),
+        animate(350)
+      ]),
     ])
   ]
 })
-export class CartItemComponent {
+export class CartItemComponent implements OnInit {
   constructor() {}
 
   @Input() product: Product;
+  @Output() clear = new EventEmitter<number>();
+
+  ngOnInit() {
+    console.log('clearasdada', this.clear)
+  }
 }

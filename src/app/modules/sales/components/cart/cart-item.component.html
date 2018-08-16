@@ -10,7 +10,7 @@
     R${{ product.salePrice }} 
   </div>
   <div class="cart-item_details-actions flex">
-    <button mat-icon-button class="btn btn-edit" (click)="clearCart()">
+    <button mat-icon-button class="btn btn-edit" (click)="clear.emit(product.itemId)">
       <mat-icon>edit</mat-icon>
     </button>
   </div>

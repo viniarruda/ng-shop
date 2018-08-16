@@ -1,5 +1,4 @@
 <app-layout [containerClass]="'flex'">
-  {{ log(product) }}
   <ng-template [ngIf]="product">
     <div class="image-column">
       <h1>{{ product.name }}</h1>
@@ -15,7 +14,7 @@
         </div>
         <img src="{{ product.largeImage }}" alt="{{ product.name }}" />
       </div> 
-      <button mat-raised-button color="primary" routerLink="/products">
+      <button mat-raised-button color="primary" routerLink="/sales">
         Back
       </button>
     </div>

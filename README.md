@@ -1,5 +1,11 @@
 # NgShop
 
+Project using Angular 6 and Wallmart Api. 
+Simple e-commerce implementation. 
+  - Products list
+  - Product detail
+  - Add/Remove item to Cart
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 
