@@ -15,7 +15,7 @@ import {Product} from '../../../../core/models/product';
         animate(350)
       ]),
       transition(':leave', [
-        style({transform: 'translateX(-100%)'}),
+        style({transform: 'translateX(0%)'}),
         animate(350)
       ]),
     ])
@@ -28,6 +28,6 @@ export class CartItemComponent implements OnInit {
   @Output() clear = new EventEmitter<number>();
 
   ngOnInit() {
-    console.log('clearasdada', this.clear)
+    
   }
 }
