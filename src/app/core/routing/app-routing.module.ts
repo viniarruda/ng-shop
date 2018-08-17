@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'sales', loadChildren: '../../modules/sales/sales.module#SalesModule'},
+  { path: 'checkout', loadChildren: '../../modules/checkout/checkout.module#CheckoutModule'},
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
 ];
 

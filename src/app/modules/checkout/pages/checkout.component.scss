@@ -1,0 +1,12 @@
+.container-checkout {
+  flex-flow: row wrap;
+  app-checkout-cart {
+    flex: 1;
+    padding: 15px;
+    border-right: 1px solid #e6e6e6;
+  }
+  app-checkout-payment {
+    flex: 1;
+    padding: 15px;
+  }
+}

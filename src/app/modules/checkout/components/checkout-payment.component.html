@@ -1,0 +1,29 @@
+<div class="payment">
+  <h2>Pagamento</h2>
+    <mat-form-field>
+      <mat-select placeholder="Vendedor" name="employee" [(value)]="selected">
+        <mat-option *ngFor="let employee of employees" [value]="employee.value">
+          {{employee.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Selected value: {{selected}} </p>
+    <mat-form-field appearance="outline">
+      <mat-label>Vendedor</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>CPF, CNPJ ou Email de Cadastro</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo de Entrega</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+</div>
