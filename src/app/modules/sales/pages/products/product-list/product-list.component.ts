@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {ProductService} from '../../../../../core/services/product.service';
 import {Product} from '../../../../../core/models/product';
 
@@ -10,6 +10,7 @@ import {Product} from '../../../../../core/models/product';
 export class ProductListComponent implements OnInit {
   products: Product[];
   searching: Boolean = false;
+  @Input() toggleCart;
 
   get isLoading(): Boolean {
     return this.products == null;
@@ -19,6 +20,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+    console.log(this.toggleCart);
   }
 
   getProducts() {

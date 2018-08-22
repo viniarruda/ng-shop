@@ -2,6 +2,8 @@
   <mat-sidenav #nav class="side-nav">
     <mat-nav-list>
       <a mat-list-item (click)="home()">Home</a>
+      <a mat-list-item (click)="home()">Encomendas</a>
+      <a mat-list-item (click)="home()">Configurações</a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -29,8 +31,18 @@
               <text id="notification_count" x="7" y="11" fill="white" style="font-size: 8pt; width: 6px;" width="20" text-anchor="middle">{{ itemsInCart() }}</text>
           </svg>
         </button>
-        <button mat-icon-button>
-          <mat-icon>account_circle</mat-icon>
+        <button mat-icon-button style="margin-left: 25px;">
+            <ion-fab vertical="top" horizontal="end" slot="fixed">
+              <ion-fab-button mini>
+                <mat-icon>account_circle</mat-icon>
+              </ion-fab-button>
+              <ion-fab-list side="bottom">
+                <ion-fab-button><mat-icon>mail</mat-icon></ion-fab-button>
+                <ion-fab-button><mat-icon>payment</mat-icon></ion-fab-button>
+                <ion-fab-button><mat-icon>person_add</mat-icon></ion-fab-button>
+                <ion-fab-button><mat-icon>settings</mat-icon></ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
         </button>
       </div>
     </mat-toolbar>
@@ -47,19 +59,20 @@
     <app-container [class]="'mat-typography ' + containerClass">
       <ng-content></ng-content>
     </app-container>
+
     <mat-sidenav #cart class="side-nav right" position="end">
-        <mat-nav-list>
-          <div class="side-cart_header">
-            <button mat-icon-button (click)="cart.close()">
-              <mat-icon>close</mat-icon>
-            </button>
-            <h1 class="side-cart_header-title">Carrinho</h1>
-          </div>
-          <div class="side-cart_content">
-            <app-cart-pickup></app-cart-pickup>
-          </div>
-        </mat-nav-list>
-      </mat-sidenav>
+      <mat-nav-list>
+        <div class="side-cart_header">
+          <button mat-icon-button (click)="cart.close()">
+            <mat-icon>close</mat-icon>
+          </button>
+          <h1 class="side-cart_header-title">Carrinho</h1>
+        </div>
+        <div class="side-cart_content">
+          <app-cart-pickup></app-cart-pickup>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

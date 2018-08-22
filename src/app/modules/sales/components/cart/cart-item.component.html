@@ -1,17 +1,23 @@
-<div [@itemAnim] class="cart-pickup_content-item">
-  <div class="cart-item_details flex">
-    <img src="{{ product.thumbnailImage }}" alt="{{ product.name }}">
-    <div class="cart-item_details-text">
-      <div>{{ product.itemId}}</div>
-      <div>{{ product.name }}</div>
-    </div>
-  </div>
-  <div class="cart-item_details-price flex">
-    R${{ product.salePrice }} 
-  </div>
-  <div class="cart-item_details-actions flex">
-    <button mat-icon-button class="btn btn-edit" (click)="clear.emit(product.itemId)">
-      <mat-icon>edit</mat-icon>
-    </button>
-  </div>
-</div>
+<ion-list [@itemAnim]>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="{{ product.thumbnailImage }}"/>
+      </ion-avatar>
+      <ion-label>
+        <ion-grid>
+            <ion-row>
+              <ion-col size="10">
+                <h3>{{ product.itemId}}</h3>
+                <h2 style="text-overflow: ellipsis;overflow: hidden;">{{ product.name }}</h2>
+                <p>R${{ product.salePrice }}</p>
+              </ion-col>
+              <ion-col size="2">
+                <button mat-icon-button class="btn btn-edit" (click)="clear.emit(product.itemId)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-label>
+    </ion-item>
+  </ion-list>

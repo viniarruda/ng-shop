@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import {SalesRoutingModule} from './sales-routing.module';
 import {ProductListComponent} from './pages/products/product-list/product-list.component';
@@ -16,6 +17,7 @@ import {ProductDetailComponent} from './pages/products/product-detail/product-de
   imports: [
     CommonModule,
     SharedModule,
+    IonicModule,
     SalesRoutingModule,
     MatFormFieldModule,
     MatInputModule,
@@ -33,6 +35,6 @@ import {ProductDetailComponent} from './pages/products/product-detail/product-de
     ProductDetailComponent,
     ProductSearchComponent,
     ProductCardComponent
-  ]
+  ],
 })
 export class SalesModule { }

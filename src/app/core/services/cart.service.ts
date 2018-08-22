@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Output, EventEmitter} from '@angular/core';
 import {Product} from '../models/product';
 import {Observable} from 'rxjs';
 
@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
+  @Output() sidebarCart = new EventEmitter();
 
   public cartItem: Product[] = [];
   qtd: Number;
@@ -24,8 +25,10 @@ export class CartService {
   clearCart() {
     return this.cartItem = [];
   }
-
-  totalCartPrice() {}
+  
+  openSideNavCart() {
+    this.sidebarCart.emit();
+  }
 
   removeCartItem(product: Product, id) {
     this.cartItem.filter((product) => product.itemId === id)

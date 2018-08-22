@@ -23,12 +23,10 @@
       <p>{{ product.shortDescription }}</p>
       <span>{{ product.stock !== 'Not available' ? product.salePrice : product.stock}}</span>
       <mat-divider></mat-divider>
-      <button mat-raised-button>
-        <mat-icon>local_shipping</mat-icon> Encomendar
-      </button>
-      <button mat-raised-button color="primary" (click)="getCartItem(product)" class="btn btn-buy">
-        Comprar
-      </button>
+      <ion-button size="small" color="secondary">
+          <mat-icon>local_shipping</mat-icon> Encomendar
+      </ion-button>
+      <ion-button size="small" color="primary" (click)="getCartItem(product)">Comprar</ion-button>
     </div>
   </ng-template>
   </app-layout>

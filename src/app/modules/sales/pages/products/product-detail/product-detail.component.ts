@@ -24,6 +24,7 @@ export class ProductDetailComponent implements OnInit {
 
   getCartItem(product: Product) {
     this.cartService.addCartItem(product);
+    this.cartService.openSideNavCart();
   }
 
   getProduct(id: Number) {

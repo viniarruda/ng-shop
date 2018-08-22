@@ -1,14 +1,12 @@
-<mat-card
+<ion-card
   routerLink="/sales/product/{{product.itemId}}"
   *ngIf="product && product.thumbnailImage"
   ngClass="{{class}}">
+  <ion-img src="{{ product.largeImage ? product.largeImage : product.mediumImage}}" alt="{{ product.name }}"></ion-img>
 
-  <img mat-card-image src="{{ product.largeImage ? product.largeImage : product.mediumImage}}" />
+  <ion-card-content>
+    <ion-card-title>{{product.name}}</ion-card-title>
 
-  <mat-card-content>
-    <strong>{{product.name}}</strong>
-    <span class="product-card_price">${{ product.salePrice }}</span>
     <p>{{product.shortDescription}}</p>
-  </mat-card-content>
-
-</mat-card>
+  </ion-card-content>
+</ion-card>

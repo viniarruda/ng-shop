@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import {ContainerComponent} from './components/container.component';
 import {
@@ -14,6 +15,7 @@ import {CartItemComponent} from '../modules/sales/components/cart/cart-item.comp
 @NgModule({
   imports: [
     CommonModule,
+    IonicModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
     MatSidenavModule,
