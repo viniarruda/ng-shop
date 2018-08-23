@@ -3,8 +3,10 @@
 Project using Angular 6 and Wallmart Api. 
 Simple e-commerce implementation. 
   - Products list
+  - Search products
   - Product detail
   - Add/Remove item to Cart
+  - Total cart price
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
@@ -17,6 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Using
 - Material
 - Material Icons
+- Ionic components
 
 ## Development server
 

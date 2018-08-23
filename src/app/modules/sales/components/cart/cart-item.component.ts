@@ -14,7 +14,7 @@ import {Product} from '../../../../core/models/product';
         style({transform: 'translateX(100%)'}),
         animate(350)
       ]),
-      transition('*=>void', [
+      transition('* => void', [
         style({transform: 'translateX(0%)'}),
         animate(350)
       ]),

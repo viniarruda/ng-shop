@@ -34,7 +34,7 @@ export class CartPickupComponent implements OnInit {
     this.cartService.cartItem.splice(indexCart, 1);
   }
 
-  clear() {
+  clearAll() {
     this.cartService.cartItem = [];
     this.recentItem = this.cartService.cartItem;
   }

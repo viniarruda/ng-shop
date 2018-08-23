@@ -46,16 +46,9 @@
         </button>
       </div>
     </mat-toolbar>
-    <mat-toolbar style="background-color: #A7DBD8;color:#fff;">
-        <div class="sales-group">
-          <mat-icon>filter_list</mat-icon>
-          <mat-icon>shopping_cart</mat-icon>
-          <mat-icon>local_shipping</mat-icon>
-          <mat-icon>history</mat-icon>
-        </div>
-      <mat-icon>person</mat-icon>
+    <mat-toolbar style="background-color: #A7DBD8;color:#fff;height: 35px;display: flex;flex-direction: column;justify-content: flex-start;align-items:flex-start;">
+      <app-tabs></app-tabs>
     </mat-toolbar>
-
     <app-container [class]="'mat-typography ' + containerClass">
       <ng-content></ng-content>
     </app-container>

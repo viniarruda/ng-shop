@@ -1,0 +1,10 @@
+<div class=tab-container>
+  <ul class="tabs clearfix">
+    <li class="add-new" (click)="createTab()">
+      <a>+</a>
+    </li>
+    <li [ngClass]="{'active': selectedItem === item}" (click)="listClick($event, item)" *ngFor="let item of tabs">
+      <a routerLink="{{ item.Link }}">Shop</a> 
+    </li>
+  </ul>
+</div>

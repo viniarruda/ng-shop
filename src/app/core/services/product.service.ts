@@ -5,7 +5,6 @@ import {Observable} from 'rxjs';
 import {catchError, map} from 'rxjs/internal/operators';
 import {BaseService} from '../http/base.service';
 import {ArrayResponse} from '../http/interfaces/array-response';
-import {Response} from '../http/interfaces/response';
 import {MatSnackBar} from '@angular/material';
 
 @Injectable({

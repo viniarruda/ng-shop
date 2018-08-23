@@ -1,0 +1,90 @@
+.tab-container {
+  ul.tabs {
+    margin: 0;
+    list-style-type: none;
+    line-height: 35px;
+    max-height: 35px;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 20px;
+    > li {
+      &.add-new {
+        background-color: #B1B1B1;
+        cursor: pointer;
+        a {
+          color: white;
+          font-size: 25px;
+        }
+        &:before {
+          border-color: transparent #B1B1B1 transparent transparent;
+        }
+        &:after {
+          border-color: transparent transparent transparent #B1B1B1;
+        }
+      }
+      &.active {
+        z-index: 2;
+        background: #efefef;
+        &:before {
+          border-color: transparent #efefef transparent transparent;
+        }
+        &:after {
+          border-color: transparent transparent transparent #efefef;
+        }
+      }
+      float: right;
+      margin: 5px -10px 0;
+      border-top-right-radius: 20px 40px;
+      border-top-left-radius: 20px 40px;
+      padding: 0 30px 0 25px;
+      height: 170px;
+      background: #ddd;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      max-width: 200px;
+      > a {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        color: #222;
+        font-size: 18px;
+      }
+      &:before, &:after {
+        content: '';
+        background: transparent;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        border-width: 10px;
+        top: 0px;
+        border-style: solid;
+        position: absolute;
+      }
+      &:before {
+        border-color: transparent #ddd transparent transparent;
+        -webkit-transform: rotate(48deg);
+        left: -23px;
+      }
+      &:after {
+        border-color: transparent transparent transparent #ddd;
+        -webkit-transform: rotate(-48deg);
+        right: -17px;
+      }
+    }
+  }
+    
+  .clearfix {
+    &:before {
+      content: "";
+      display: table;
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    zoom: 1;
+  }
+}

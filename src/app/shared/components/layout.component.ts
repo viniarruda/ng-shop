@@ -1,4 +1,4 @@
-import {Component, Input, Output, OnInit, ViewChild, Directive} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {CartService} from '../../core/services/cart.service';
 
@@ -7,7 +7,7 @@ import {CartService} from '../../core/services/cart.service';
   templateUrl: 'layout.component.html',
   styleUrls: ['layout.component.scss']
 })
-@Directive({ selector: '[cart]' })
+
 export class LayoutComponent implements OnInit{
   @Input() containerClass = '';
   @Input() title = 'ANGULAR SHOP';
