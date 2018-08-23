@@ -8,6 +8,7 @@ import { TabService } from '../../core/services/tab.service';
 })
 export class TabComponent implements OnInit {
   @Input() active: true;
+  class: String;
   tabs;
   selectedItem;
   
@@ -15,13 +16,18 @@ export class TabComponent implements OnInit {
 
   ngOnInit() {
     this.tabs = this.tabService.tabs;
+    this.tabs.activeTabId;
   }
 
-  listClick(event, newValue) {
-    this.selectedItem = newValue;
+  switchTabs(event, item) {
+    this.tabService.activeTabId = item.id;
   }
 
   createTab() {
     this.tabService.createTab();
+  }
+
+  log(val){
+    console.log(val);
   }
 }

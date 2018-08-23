@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 })
 export class TabService {
   tabs: Tab[] = [];
-  id: number = 1;
+  activeTabId;
 
   constructor(public router: Router) {
     this.tabs.length === 0 && this.tabs.push({
