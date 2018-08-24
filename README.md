@@ -17,9 +17,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - ng serve -o
 
 ## Using
-- Material
-- Material Icons
-- Ionic components
+- Material (https://material.angular.io)
+- Material Icons (https://material.io/tools/icons/)
+- Ionic components (https://beta.ionicframework.com/docs/api)
 
 ## Development server
 

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
+import {ToastController} from '@ionic/angular';
 import {CartService} from '../../core/services/cart.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class LayoutComponent implements OnInit{
   @ViewChild('cart') sidenavCart;
 
   constructor(private router: Router,
-              private cartService: CartService) {}
+              private cartService: CartService,
+              public toastController: ToastController) {}
   
   ngOnInit() {
     this.itemsInCart();
@@ -28,6 +30,17 @@ export class LayoutComponent implements OnInit{
 
   itemsInCart() {
     return this.cartService.quantityItemsCart();
+  }
+
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Test Toast',
+      showCloseButton: true,
+      position: 'top',
+      closeButtonText: 'Okay!'
+    });
+    toast.present();
   }
 
   log(val) {

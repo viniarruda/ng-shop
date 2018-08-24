@@ -7,23 +7,20 @@ import { TabService } from '../../core/services/tab.service';
   styleUrls: ['tabs.component.scss']
 })
 export class TabComponent implements OnInit {
-  @Input() active: true;
   class: String;
   tabs;
-  selectedItem;
   
   constructor(private tabService: TabService){}
 
   ngOnInit() {
     this.tabs = this.tabService.tabs;
-    this.tabs.activeTabId;
   }
 
   switchTabs(event, item) {
-    this.tabService.activeTabId = item.id;
+    this.tabService.activeTabId = item.Id;
   }
 
-  createTab() {
+  newTab() {
     this.tabService.createTab();
   }
 

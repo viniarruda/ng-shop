@@ -1,6 +1,6 @@
 <div class=tab-container>
   <ul class="tabs clearfix">
-    <li class="add-new" (click)="createTab()">
+    <li class="add-new" (click)="newTab()">
       <a>+</a>
     </li>
     <li class="{{ class }}"(click)="switchTabs($event, item)" *ngFor="let item of tabs">
