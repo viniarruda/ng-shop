@@ -1,25 +1,27 @@
 # NgShop
 
-Project using Angular 6 and Wallmart Api. 
-Simple e-commerce implementation. 
-  - Products list
-  - Search products
-  - Product detail
-  - Add/Remove item to Cart
-  - Total cart price
+Project using Angular 6 and Wallmart Api.
+Simple e-commerce implementation.
+  
+- Products list
+- Search products
+- Product detail
+- Add/Remove item to Cart
+- Total cart price
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
-
 ## Install
+
 - git clone
 - npm install
 - ng serve -o
 
 ## Using
-- Material (https://material.angular.io)
-- Material Icons (https://material.io/tools/icons/)
-- Ionic components (https://beta.ionicframework.com/docs/api)
+
+- [Material](https://material.angular.io)
+- [Material Icons](https://material.io/tools/icons/)
+- [Ionic components](https://beta.ionicframework.com/docs/api)
 
 ## Development server
 

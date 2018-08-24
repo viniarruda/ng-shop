@@ -32,7 +32,6 @@ export class LayoutComponent implements OnInit{
     return this.cartService.quantityItemsCart();
   }
 
-
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Test Toast',
