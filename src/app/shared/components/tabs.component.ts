@@ -9,7 +9,6 @@ import {Tab} from '../../core/models/tab';
   styleUrls: ['tabs.component.scss']
 })
 export class TabComponent implements OnInit {
-  class: String;
   tabs;
   
   constructor(private tabService: TabService, private router: Router){}

@@ -17,6 +17,7 @@ export class ProductDetailComponent implements OnInit {
               private cartService: CartService) {
   }
 
+  //Quando ocorre mudança na url
   ngOnInit() {
     this.route.url.subscribe((segment) => {
       const id = +this.route.snapshot.paramMap.get('id');

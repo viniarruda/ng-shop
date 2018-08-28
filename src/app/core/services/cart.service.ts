@@ -1,5 +1,7 @@
 import {Injectable, Output, EventEmitter} from '@angular/core';
 import {Product} from '../models/product';
+import {Cart} from '../models/cart';
+import {TabService} from './tab.service';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -9,13 +11,19 @@ export class CartService {
   @Output() sidebarCart = new EventEmitter();
 
   public cartItem: Product[] = [];
+  public cartItems: Cart[] = [];
+  
   qtd: Number;
 
-  constructor() {
+  constructor(private tabService: TabService) {
+
   }
 
   addCartItem(product: Product) {
-    return this.cartItem.push(product);
+    const index = this.cartItems.findIndex(i => this.tabService.activeTabId === i.tabId);
+    if (index > -1) {
+      this.cartItems[index].items.push(product);
+    }
   }
 
   quantityItemsCart() {
@@ -31,7 +39,10 @@ export class CartService {
   }
 
   removeCartItem(product: Product, id) {
-    this.cartItem.filter((product) => product.itemId === id)
+    const index = this.cartItems.findIndex(i => this.tabService.activeTabId === i.tabId);
+    if (index > -1) {
+      this.cartItems[index].items = this.cartItems[index].items.filter((product) => product.itemId !== id)
+    }
   }
 
 }

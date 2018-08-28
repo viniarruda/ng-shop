@@ -21,17 +21,17 @@ export class CartPickupComponent implements OnInit {
     this.recentItem = this.cartService.cartItem;
   }
 
-  editCartItem(id) {
-
-  }
-
   quantityItemsCart() {
     return this.recentItem.length
   }
 
-  clearCart(id) {
-    let indexCart = this.cartService.cartItem.findIndex(i => i.itemId === id);
-    this.cartService.cartItem.splice(indexCart, 1);
+  // clearCart(id) {
+  //   let indexCart = this.cartService.cartItem.findIndex(i => i.itemId === id);
+  //   this.cartService.cartItem.splice(indexCart, 1);
+  // }
+  
+  clearCart(product: Product, id) {
+    this.cartService.removeCartItem(product, id);
   }
 
   clearAll() {
