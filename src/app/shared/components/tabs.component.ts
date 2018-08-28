@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TabService } from '../../core/services/tab.service';
+import {Router} from '@angular/router';
+import {Tab} from '../../core/models/tab';
 
 @Component({
   selector: 'app-tabs',
@@ -10,14 +12,15 @@ export class TabComponent implements OnInit {
   class: String;
   tabs;
   
-  constructor(private tabService: TabService){}
+  constructor(private tabService: TabService, private router: Router){}
 
   ngOnInit() {
     this.tabs = this.tabService.tabs;
   }
 
-  switchTabs(event, item) {
+  switchTabs(item: Tab) {
     this.tabService.activeTabId = item.Id;
+    this.router.navigate([item.Link]);
   }
 
   newTab() {

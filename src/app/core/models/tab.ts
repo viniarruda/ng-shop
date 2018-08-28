@@ -1,4 +1,4 @@
 export class Tab {
-  Id: Number;
-  Link: String;
+  Id: number;
+  Link: string;
 }

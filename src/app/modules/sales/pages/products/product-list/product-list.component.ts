@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
 
   getProducts() {
     this.productService.listProducts().subscribe(
-      data => this.products = data.items);
+      data => this.products = data.items.slice(1, 30));
   }
 
   toggleSearch() {

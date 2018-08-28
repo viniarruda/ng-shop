@@ -3,8 +3,8 @@
     <li class="add-new" (click)="newTab()">
       <a>+</a>
     </li>
-    <li class="{{ class }}"(click)="switchTabs($event, item)" *ngFor="let item of tabs">
-      <a routerLink="{{ item.Link }}">Shop</a> 
+    <li class="{{ class }}" (click)="switchTabs(item)" *ngFor="let item of tabs.reverse()">
+      <p>{{item.Link}}</p>
     </li>
   </ul>
 </div>

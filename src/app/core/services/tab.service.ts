@@ -11,17 +11,24 @@ export class TabService {
 
   constructor(public router: Router) {
     this.tabs.length === 0 && this.tabs.push({
-      Id: (this.tabs.length - 1) + 1,
+      Id: this.tabs.length + 1,
       Link: this.router.url
-    })
+    });
+    this.activeTabId = 1;
   }
 
-  createTab() {
+  createTab(): void {
     this.tabs.push({
-      Id: (this.tabs.length - 1) + 1,
+      Id: this.tabs.length + 1,
       Link: "/sales"
     });
     console.log(this.tabs)
   }
 
+  updateTabUrl(url: string): void {
+    const index = this.tabs.findIndex(t => t.Id === this.activeTabId);
+    if (index > -1) {
+      this.tabs[index].Link = url;
+    }
+  }
 }

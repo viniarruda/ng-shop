@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import { ProductService } from '../../../../../core/services/product.service';
 import { CartService } from '../../../../../core/services/cart.service';
 import {Product} from '../../../../../core/models/product';
@@ -18,8 +18,10 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.getProduct(id);
+    this.route.url.subscribe((segment) => {
+      const id = +this.route.snapshot.paramMap.get('id');
+      this.getProduct(id);
+    });
   }
 
   getCartItem(product: Product) {

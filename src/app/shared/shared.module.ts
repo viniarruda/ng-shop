@@ -30,8 +30,7 @@ import {CartItemComponent} from '../modules/sales/components/cart/cart-item.comp
     RouterModule
   ],
   providers: [
-    CartService,
-    TabService
+    CartService
   ],
   declarations: [
     ContainerComponent,
