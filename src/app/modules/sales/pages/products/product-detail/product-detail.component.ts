@@ -1,6 +1,7 @@
 import {Component, OnInit, OnChanges} from '@angular/core';
 import { ProductService } from '../../../../../core/services/product.service';
 import { CartService } from '../../../../../core/services/cart.service';
+import { TabService } from '../../../../../core/services/tab.service';
 import {Product} from '../../../../../core/models/product';
 import {ActivatedRoute} from '@angular/router';
 
@@ -14,10 +15,11 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
-              private cartService: CartService) {
+              private cartService: CartService,
+              private tabService: TabService) {
   }
 
-  //Quando ocorre mudança na url
+  // Quando ocorre mudança na url
   ngOnInit() {
     this.route.url.subscribe((segment) => {
       const id = +this.route.snapshot.paramMap.get('id');
@@ -27,6 +29,7 @@ export class ProductDetailComponent implements OnInit {
 
   getCartItem(product: Product) {
     this.cartService.addCartItem(product);
+    // this.cartService.addCartItem(product);
     this.cartService.openSideNavCart();
   }
 

@@ -11,7 +11,8 @@ import {Tab} from '../../core/models/tab';
 export class TabComponent implements OnInit {
   tabs;
   
-  constructor(private tabService: TabService, private router: Router){}
+  constructor(private tabService: TabService,
+              private router: Router) { }
 
   ngOnInit() {
     this.tabs = this.tabService.tabs;
@@ -26,7 +27,7 @@ export class TabComponent implements OnInit {
     this.tabService.createTab();
   }
 
-  log(val){
+  log(val) {
     console.log(val);
   }
 }

@@ -22,7 +22,7 @@ export class CartPickupComponent implements OnInit {
   }
 
   quantityItemsCart() {
-    return this.recentItem.length
+    return this.recentItem.length;
   }
 
   // clearCart(id) {
@@ -30,9 +30,9 @@ export class CartPickupComponent implements OnInit {
   //   this.cartService.cartItem.splice(indexCart, 1);
   // }
   
-  clearCart(product: Product, id) {
-    this.cartService.removeCartItem(product, id);
-  }
+  // clearCart(product: Product, id) {
+  //   this.cartService.removeCartItem(product, id);
+  // }
 
   clearAll() {
     this.cartService.cartItem = [];

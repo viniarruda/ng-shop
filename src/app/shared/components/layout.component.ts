@@ -10,7 +10,7 @@ import {TabService} from '../../core/services/tab.service';
   styleUrls: ['layout.component.scss']
 })
 
-export class LayoutComponent implements OnInit{
+export class LayoutComponent implements OnInit {
   @Input() containerClass = '';
   @Input() title = 'ANGULAR SHOP';
   @ViewChild('cart') sidenavCart;

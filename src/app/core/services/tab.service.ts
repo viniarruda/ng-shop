@@ -1,17 +1,20 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Output, EventEmitter} from '@angular/core';
+
 import {Tab} from '../models/tab';
+
 import {Router} from '@angular/router';
-import {CartService} from './cart.service';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TabService {
+  @Output() onNewTab = new EventEmitter();
   tabs: Tab[] = [];
-  activeTabId;
+  activeTabId: number;
 
-  constructor(public router: Router,
-              public cartService: CartService) {
+  constructor(public router: Router) {
     this.tabs.length === 0 && this.tabs.push({
       Id: this.tabs.length + 1,
       Link: this.router.url
@@ -22,13 +25,14 @@ export class TabService {
   createTab(): void {
     this.tabs.push({
       Id: this.tabs.length + 1,
-      Link: "/sales"
+      Link: '/sales'
     });
     console.log(this.tabs);
-    this.cartService.cartItems.push({
-      tabId: this.tabs.length,
-      items: []
-    });
+    this.onNewTab.emit(this.tabs.length);
+    // this.cartService.cartItems.push({
+    //   tabId: this.tabs.length,
+    //   items: []
+    // });
   }
 
   updateTabUrl(url: string): void {
@@ -37,4 +41,9 @@ export class TabService {
       this.tabs[index].Link = url;
     }
   }
+
+  // addCartItem(product: Product) {
+  //   this.cartService.addCartItem(product, this.activeTabId);
+  //   console.log('id', this.activeTabId);
+  // }
 }

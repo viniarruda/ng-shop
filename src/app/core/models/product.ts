@@ -1,16 +1,14 @@
 import {Item} from './item';
 import {Gallery} from './gallery';
-import {Cart} from './cart';
 
 export class Product {
   category: Number;
-  brand: String;
+  brandName: String;
   format: String;
   nextPage: String;
   totalPages: Number;
   items: Item[];
 
-  cart: Cart[];
   // Single Product
   itemId: Number;
   name: String;
