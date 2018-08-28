@@ -1,8 +1,8 @@
-<ng-template [ngIf]="recentItem">
+<ng-template [ngIf]="cartService.activeCart.items">
   <div class="cart-pickup_content">
-    <app-cart-item *ngFor="let i of recentItem" [product]="i" (clear)="clearCart($event)"></app-cart-item>
+    <app-cart-item *ngFor="let i of cartService.activeCart.items" [product]="i" (clear)="clearCart($event)"></app-cart-item>
     <div class="cart-total-price">
-      Total: R${{ totalCartPrice() }}
+      <!--Total: R${{ totalCartPrice() }}-->
       Itens: {{ quantityItemsCart() }}
     </div>
     <div class="cart-pickup_actions">
@@ -16,4 +16,3 @@
   </div>
 </ng-template>
   
-    

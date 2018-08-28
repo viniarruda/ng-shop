@@ -49,6 +49,6 @@ export class LayoutComponent implements OnInit {
   }
 
   log(val) {
-    console.log(val)
+    console.log(val);
   }
 }

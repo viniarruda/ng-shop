@@ -17,28 +17,28 @@ export class CartService {
      if (index > -1) {
        return this.carts[index];
      }
-    return null
+    return null;
   }
 
   constructor(private tabService: TabService) {
-    this.cartItems.push({
+    this.carts.push({
       tabId: 1,
       items: []
     });
     this.tabService.onNewTab.subscribe(
-      data => this.cartItems.push({
+      data => this.carts.push({
         tabId: data,
         items: []
       })
     );
-    console.log(this.cartItems);
+    console.log(this.carts);
   }
 
 
    addProduct(product: Product) {
-     this.activeCart.items.push(product)
+     this.activeCart.items.push(product);
      
-     console.log(this.carts);
+     console.log(this.activeCart);
      // const index = this.cartItems.findIndex(i => i.tabId === activeId);
      // console.log('index', index);
      // console.log('produto', product);
@@ -60,7 +60,8 @@ export class CartService {
   }
 
   removeCartItem(id) {
-      this.activeCart.items = this.activeCart.items.filter((product) => product.itemId !== id)
+    console.log('novo array', this.activeCart.items);
+    this.activeCart.items = this.activeCart.items.filter((product) => product.itemId !== id);
   }
 
 }
