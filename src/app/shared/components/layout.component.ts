@@ -23,7 +23,6 @@ export class LayoutComponent implements OnInit {
               private cartService: CartService,
               public toastController: ToastController,
               private tabService: TabService) {}
-  
   ngOnInit() {
     this.itemsInCart();
     this.cartService.sidebarCart.subscribe(

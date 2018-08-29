@@ -28,7 +28,6 @@ export class CartPickupComponent implements OnInit {
   clearCart(id) {
     this.cartService.removeCartItem(id);
   }
-  
   // clearCart(product: Product, id) {
   //   this.cartService.removeCartItem(product, id);
   // }
@@ -41,7 +40,6 @@ export class CartPickupComponent implements OnInit {
   //   this.totalPrice = this.recentItem.reduce((totalPrice, product) => totalPrice + product.salePrice, 0);
   //   return this.totalPrice;
   // }
-  
   log(val) {
     console.log(val);
   }

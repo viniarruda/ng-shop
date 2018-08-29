@@ -11,7 +11,7 @@ import {Tab} from '../../core/models/tab';
 export class TabComponent implements OnInit {
   tabs;
   
-  constructor(private tabService: TabService,
+  constructor(public tabService: TabService,
               private router: Router) { }
 
   ngOnInit() {

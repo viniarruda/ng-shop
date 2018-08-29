@@ -26,8 +26,7 @@ import {CheckoutPaymentComponent} from './components/checkout-payment.component'
     MatDividerModule
   ],
   providers: [
-    ProductService,
-    CartService
+    ProductService
   ],
   declarations: [
     CheckoutComponent,

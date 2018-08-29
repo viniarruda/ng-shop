@@ -37,7 +37,6 @@ export class CartService {
 
    addProduct(product: Product) {
      this.activeCart.items.push(product);
-     
      console.log(this.activeCart);
      // const index = this.cartItems.findIndex(i => i.tabId === activeId);
      // console.log('index', index);
@@ -62,6 +61,7 @@ export class CartService {
   removeCartItem(id) {
     console.log('novo array', this.activeCart.items);
     this.activeCart.items = this.activeCart.items.filter((product) => product.itemId !== id);
+
   }
 
 }
