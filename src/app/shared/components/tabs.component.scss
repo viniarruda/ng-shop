@@ -64,6 +64,7 @@
         top: 0px;
         border-style: solid;
         position: absolute;
+        z-index: -999;
       }
       &:before {
         border-color: transparent #ddd transparent transparent;

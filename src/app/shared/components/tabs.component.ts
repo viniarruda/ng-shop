@@ -9,10 +9,10 @@ import {Tab} from '../../core/models/tab';
   styleUrls: ['tabs.component.scss']
 })
 export class TabComponent implements OnInit {
-  class: String;
   tabs;
   
-  constructor(private tabService: TabService, private router: Router){}
+  constructor(public tabService: TabService,
+              private router: Router) { }
 
   ngOnInit() {
     this.tabs = this.tabService.tabs;
@@ -27,7 +27,7 @@ export class TabComponent implements OnInit {
     this.tabService.createTab();
   }
 
-  log(val){
+  log(val) {
     console.log(val);
   }
 }

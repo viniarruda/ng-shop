@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Product} from '../../../../core/models/product';
 import {CartService} from '../../../../core/services/cart.service';
 
 @Component({
@@ -8,42 +7,39 @@ import {CartService} from '../../../../core/services/cart.service';
   styleUrls: ['./cart-pickup.component.scss']
 })
 export class CartPickupComponent implements OnInit {
-  recentItem: Product[] = [];
+  recentItem;
   totalPrice: number = 0;
 
-  constructor(private cartService: CartService) {}
+  constructor(public cartService: CartService) {}
 
   get isLoading(): Boolean {
     return this.recentItem == null;
   }
 
   ngOnInit() {
-    this.recentItem = this.cartService.cartItem;
-  }
-
-  editCartItem(id) {
-
+    this.cartService.activeCart.items; // Itens do Carrinho ativo
+    console.log('INIT', this.cartService.activeCart.items);
   }
 
   quantityItemsCart() {
-    return this.recentItem.length
+    return this.cartService.activeCart.items.length;
   }
 
   clearCart(id) {
-    let indexCart = this.cartService.cartItem.findIndex(i => i.itemId === id);
-    this.cartService.cartItem.splice(indexCart, 1);
+    this.cartService.removeCartItem(id);
   }
+  // clearCart(product: Product, id) {
+  //   this.cartService.removeCartItem(product, id);
+  // }
 
   clearAll() {
-    this.cartService.cartItem = [];
-    this.recentItem = this.cartService.cartItem;
+    this.cartService.clearCart();
   }
 
-  totalCartPrice() {
-    this.totalPrice = this.recentItem.reduce((totalPrice, product) => totalPrice + product.salePrice, 0);
-    return this.totalPrice;
-  }
-  
+  // totalCartPrice() {
+  //   this.totalPrice = this.recentItem.reduce((totalPrice, product) => totalPrice + product.salePrice, 0);
+  //   return this.totalPrice;
+  // }
   log(val) {
     console.log(val);
   }

@@ -25,13 +25,11 @@ import {CartItemComponent} from '../modules/sales/components/cart/cart-item.comp
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatTabsModule,
     RouterModule
   ],
-  providers: [
-    CartService
-  ],
+  providers: [],
   declarations: [
     ContainerComponent,
     SpinnerComponent,

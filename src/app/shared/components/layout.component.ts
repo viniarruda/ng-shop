@@ -10,7 +10,7 @@ import {TabService} from '../../core/services/tab.service';
   styleUrls: ['layout.component.scss']
 })
 
-export class LayoutComponent implements OnInit{
+export class LayoutComponent implements OnInit {
   @Input() containerClass = '';
   @Input() title = 'ANGULAR SHOP';
   @ViewChild('cart') sidenavCart;
@@ -23,7 +23,6 @@ export class LayoutComponent implements OnInit{
               private cartService: CartService,
               public toastController: ToastController,
               private tabService: TabService) {}
-  
   ngOnInit() {
     this.itemsInCart();
     this.cartService.sidebarCart.subscribe(
@@ -49,6 +48,6 @@ export class LayoutComponent implements OnInit{
   }
 
   log(val) {
-    console.log(val)
+    console.log(val);
   }
 }

@@ -27,7 +27,5 @@ export class CartItemComponent implements OnInit {
   @Input() product: Product;
   @Output() clear = new EventEmitter<number>();
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 }

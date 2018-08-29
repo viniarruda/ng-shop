@@ -9,7 +9,6 @@ import {
   MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule
 } from '@angular/material';
 import {ProductService} from '../../core/services/product.service';
-import { CartService } from '../../core/services/cart.service';
 import {ProductCardComponent} from './components/products/product-card.component';
 import {ProductDetailComponent} from './pages/products/product-detail/product-detail.component';
 
@@ -28,7 +27,6 @@ import {ProductDetailComponent} from './pages/products/product-detail/product-de
   ],
   providers: [
     ProductService,
-    CartService
   ],
   declarations: [
     ProductListComponent,

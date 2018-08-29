@@ -10,6 +10,7 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import {MatSnackBarModule} from '@angular/material';
 import {TabService} from './core/services/tab.service';
+import {CartService} from './core/services/cart.service';
 
 @NgModule({
   imports: [
@@ -26,7 +27,10 @@ import {TabService} from './core/services/tab.service';
   declarations: [
     AppComponent
   ],
-  providers: [TabService],
+  providers: [
+    TabService,
+    CartService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
